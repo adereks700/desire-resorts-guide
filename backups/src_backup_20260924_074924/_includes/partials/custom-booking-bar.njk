@@ -1,0 +1,49 @@
+<form class="custom-booking-bar" method="GET" action="https://links.desire-experience.com/availability/search.php" target="_blank" rel="noopener noreferrer">
+        <input type="hidden" name="affiliate" value="6589">
+        <input type="hidden" name="partner" value="14503">
+        <input type="hidden" name="lang" value="1">
+        <div class="cbb-field cbb-hotel">
+          {%- if presetHotel %}
+            <input type="hidden" name="hotel" value="{{ presetHotel.id }}">
+            <span class="cbb-field-label">Resort</span>
+            <p class="cbb-hotel-fixed">{{ presetHotel.label }}</p>
+          {%- else %}
+            <label for="cbb-hotel-{{ cbb_id_suffix | default('hero') }}">Resort</label>
+            <select name="hotel" id="cbb-hotel-{{ cbb_id_suffix | default('hero') }}" required>
+              <option value="">Select resort</option>
+              <option value="9">Desire Riviera Maya</option>
+              <option value="10">Desire Pearl</option>
+            </select>
+          {%- endif %}
+        </div>
+        <div class="cbb-divider"></div>
+        <div class="cbb-field cbb-date">
+          <label for="cbb-checkin-{{ cbb_id_suffix | default('hero') }}">Check-in</label>
+          <input type="date" name="checkin" id="cbb-checkin-{{ cbb_id_suffix | default('hero') }}" required>
+        </div>
+        <div class="cbb-field cbb-nights">
+          <label for="cbb-nights-{{ cbb_id_suffix | default('hero') }}">Nights</label>
+          <select name="nights" id="cbb-nights-{{ cbb_id_suffix | default('hero') }}">
+            <option value="3">3</option>
+            <option value="4" selected>4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="10">10</option>
+            <option value="14">14</option>
+          </select>
+        </div>
+        <div class="cbb-field cbb-adults">
+          <label for="cbb-adults-{{ cbb_id_suffix | default('hero') }}">Adults</label>
+          <select name="adults" id="cbb-adults-{{ cbb_id_suffix | default('hero') }}">
+            <option value="2" selected>2</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+        <div class="cbb-divider"></div>
+        <div class="cbb-field cbb-promo">
+          <label for="cbb-promo-{{ cbb_id_suffix | default('hero') }}">Promo Code</label>
+          <input type="text" name="pc" id="cbb-promo-{{ cbb_id_suffix | default('hero') }}" placeholder="Optional" maxlength="12">
+        </div>
+        <button type="submit" class="cbb-book-btn">Check Availability</button>
+      </form>

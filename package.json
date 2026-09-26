@@ -1,0 +1,26 @@
+{
+  "name": "desire-resorts-guide",
+  "version": "1.0.0",
+  "description": "Independent first-timer guide to Desire Riviera Maya and Desire Pearl - rooms, dining, theme nights, etiquette, and booking.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "dev": "eleventy --serve --watch",
+    "clean": "rm -rf _site"
+  },
+  "keywords": [
+    "eleventy",
+    "11ty",
+    "desire-resorts",
+    "static-site"
+  ],
+  "author": "Travel with Nicole",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "clean-css": "^5.3.3",
+    "esbuild": "^0.28.2"
+  }
+}

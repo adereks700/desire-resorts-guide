@@ -1,0 +1,104 @@
+<div id="age-gate" class="age-gate" role="dialog" aria-modal="true" aria-labelledby="age-gate-title" aria-describedby="age-gate-copy">
+  <div class="age-gate__panel">
+    <h1 id="age-gate-title">Adults Only</h1>
+    <p id="age-gate-copy">{{ site.ageGateCopy }}</p>
+    <button id="age-gate-confirm" type="button">I'm 21 or older</button>
+  </div>
+</div>
+<script>
+  (function () {
+    var gate = document.getElementById('age-gate');
+    var confirmButton = document.getElementById('age-gate-confirm');
+
+    if (!gate || !confirmButton) return;
+
+    function setSiblingsInert(isInert) {
+      Array.prototype.forEach.call(document.body.children, function (el) {
+        if (el !== gate) {
+          if (isInert) {
+            el.setAttribute('inert', '');
+          } else {
+            el.removeAttribute('inert');
+          }
+        }
+      });
+    }
+
+    function confirmAgeGate() {
+      setSiblingsInert(false);
+      document.documentElement.classList.remove('age-gate-active');
+      document.body.classList.remove('age-gate-active');
+      gate.remove();
+
+      try {
+        sessionStorage.setItem('ageVerified', 'true');
+      } catch (e) {
+        // If storage is unavailable, the gate will appear again on the next page load.
+      }
+    }
+
+    try {
+      if (sessionStorage.getItem('ageVerified') === 'true') {
+        gate.remove();
+        return;
+      }
+    } catch (e) {
+      // Continue with the gate shown if storage is unavailable.
+    }
+
+    document.documentElement.classList.add('age-gate-active');
+    document.body.classList.add('age-gate-active');
+
+    // NOTE: this script is inline and unblocked, so it runs the instant the parser
+    // reaches it - before nav/main/footer further down the page exist in the DOM.
+    // Calling setSiblingsInert(true) synchronously here would loop over zero real
+    // siblings and lock nothing, silently defeating the modal's focus trap for
+    // keyboard users. Deferring to DOMContentLoaded (or running immediately if the
+    // document has already finished parsing) ensures the rest of the page actually
+    // exists before it gets marked inert.
+    function applyInertLock() {
+      setSiblingsInert(true);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', applyInertLock);
+    } else {
+      applyInertLock();
+    }
+
+    confirmButton.addEventListener('click', confirmAgeGate);
+
+    // Keep keyboard focus inside the modal while it is active.
+    gate.addEventListener('keydown', function (event) {
+      if (event.key !== 'Tab') return;
+
+      var focusable = gate.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+      if (!focusable.length) {
+        event.preventDefault();
+        return;
+      }
+
+      var first = focusable[0];
+      var last = focusable[focusable.length - 1];
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    });
+
+    // Recover focus if another script or assistive technology moves it outside the gate.
+    document.addEventListener('focusin', function (event) {
+      if (document.getElementById('age-gate') && !gate.contains(event.target)) {
+        confirmButton.focus();
+      }
+    });
+
+    window.requestAnimationFrame(function () {
+      confirmButton.focus();
+    });
+  })();
+</script>

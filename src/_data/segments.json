@@ -1,0 +1,32 @@
+{
+  "romantic-retreat": {
+    "label": "The Relaxed Retreat",
+    "resort": "Desire Pearl may be worth exploring",
+    "primaryTrigger": "Your answers point toward a vacation where downtime, privacy, and an unhurried pace matter most. Pearl is one option to compare against those priorities.",
+    "recommendedWing": "Start by comparing the current room categories and locations at Pearl, with particular attention to how close each option is to areas you want to use.",
+    "propertyUrl": "/properties/desire-pearl/",
+    "bestFor": "Couples who value quiet time together and want the freedom to join the social scene selectively.",
+    "image": "/img/Pearl_The_Relaxed_Retreat_800x993.webp",
+    "imageAlt": "The Relaxed Retreat \u2014 Desire Pearl"
+  },
+  "balanced-explorer": {
+    "label": "The Flexible Explorer",
+    "resort": "Both resorts are worth comparing",
+    "primaryTrigger": "Your answers suggest you want options: relaxing when you want to, joining the social scene when it appeals, and keeping your schedule flexible.",
+    "recommendedWing": "Compare room locations at both resorts based on the areas you expect to use most, rather than choosing a room category from the quiz alone.",
+    "propertyUrl": "/compare/",
+    "bestFor": "Couples who want a mix of downtime, social opportunities, and flexibility from day to day.",
+    "image": "/img/Compare_Both_The_Flexible_Explorer_800x993.webp",
+    "imageAlt": "The Flexible Explorer \u2014 both resorts worth comparing"
+  },
+  "social-celebration": {
+    "label": "The Social Explorer",
+    "resort": "Desire Riviera Maya may be worth exploring",
+    "primaryTrigger": "Your answers point toward a vacation where social activity, entertainment, and meeting other couples are important parts of the experience. Riviera Maya is one option to compare against those priorities.",
+    "recommendedWing": "Start by comparing the current room categories and locations at Riviera Maya, especially the proximity of each option to the areas you expect to use most.",
+    "propertyUrl": "/properties/desire-riviera-maya/",
+    "bestFor": "Couples who enjoy being close to activity and want social opportunities to be a significant part of the trip.",
+    "image": "/img/Riviera_Maya_The_Social_Explorer_800x993.webp",
+    "imageAlt": "The Social Explorer \u2014 Desire Riviera Maya"
+  }
+}

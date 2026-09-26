@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Travel with Nicole">
+  <!-- Simplified heater shield: bold gold outline, ink fill — reads at 16px -->
+  <path
+    fill="#1E1912"
+    stroke="#c5a059"
+    stroke-width="4"
+    stroke-linejoin="round"
+    d="M32 4
+       C42 4 52 6 54 10
+       L54 28
+       C54 44 42 54 32 60
+       C22 54 10 44 10 28
+       L10 10
+       C12 6 22 4 32 4
+       Z"
+  />
+  <!-- TN monogram -->
+  <text
+    x="32"
+    y="38"
+    text-anchor="middle"
+    font-family="Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Palatino, serif"
+    font-size="22"
+    font-weight="700"
+    fill="#c5a059"
+    letter-spacing="-0.5"
+  >TN</text>
+</svg>

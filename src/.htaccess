@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Permanent 301 Redirect for /eden to /properties/desire-riviera-maya/#eden
+  RewriteRule ^eden/?$ /properties/desire-riviera-maya/#eden [R=301,L]
+</IfModule>
+
+# Custom 404 Error Page
+ErrorDocument 404 /404.html
