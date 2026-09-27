@@ -95,20 +95,20 @@ permalink: '/rooms/'
     </div>
 
     <div class="filter-group" style="margin-top: 16px;">
-      <span class="filter-label">Room feature:</span>
-      <div class="filter-pills" id="vibe-pills" role="group" aria-label="Filter by room feature">
-        <button type="button" class="room-pill is-active" aria-pressed="true" data-vibe="all">All Features</button>
-        <button type="button" class="room-pill" aria-pressed="false" data-vibe="quiet-romantic">Jacuzzi / Plunge Pool</button>
-        <button type="button" class="room-pill" aria-pressed="false" data-vibe="heart-of-the-party">Swim-Up / Water Access</button>
+      <span class="filter-label">Private water:</span>
+      <div class="filter-pills" id="vibe-pills" role="group" aria-label="Filter by private water feature">
+        <button type="button" class="room-pill is-active" aria-pressed="true" data-vibe="all">All Rooms</button>
+        <button type="button" class="room-pill" aria-pressed="false" data-vibe="private-water">Jacuzzi / Plunge Pool</button>
+        <button type="button" class="room-pill" aria-pressed="false" data-vibe="swim-up">Swim-Up</button>
       </div>
-      <span id="room-vibe-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true">Showing rooms with all features.</span>
+      <span id="room-vibe-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true">Showing all room categories.</span>
     </div>
   </div>
 
   <!-- Room Cards Grid -->
   <div id="room-grid" class="rooms-cards-grid grid-auto-lg">
     {% for room in collections.room %}
-      <article class="suite-card" data-property="{{ room.data.property }}" data-vibe="{{ room.data.vibe }}">
+      <article class="suite-card" data-property="{{ room.data.property }}" data-feature="{% set roomTitle = room.data.title | lower %}{% if "swim-up" in roomTitle %}swim-up{% elif "jacuzzi" in roomTitle or "plunge" in roomTitle or "whirlpool" in roomTitle %}private-water{% else %}standard{% endif %}">
         <div class="suite-card__top">
           <span class="property-tag">
             {{ 'Riviera Maya' if room.data.property == 'drm' else 'Pearl' }}
@@ -178,7 +178,7 @@ permalink: '/rooms/'
     function filterSuites() {
       cards.forEach(card => {
         const matchProp = (activeProp === 'all' || card.dataset.property === activeProp);
-        const matchVibe = (activeVibe === 'all' || card.dataset.vibe === activeVibe);
+        const matchVibe = (activeVibe === 'all' || card.dataset.feature === activeVibe);
 
         if (matchProp && matchVibe) {
           card.style.display = 'flex';
@@ -207,7 +207,7 @@ permalink: '/rooms/'
         pill.setAttribute('aria-pressed', 'true');
         activeVibe = pill.dataset.vibe;
         const status = document.getElementById('room-vibe-status');
-        if (status) status.textContent = `Showing rooms for ${pill.textContent.trim().toLowerCase()}.`;
+        if (status) status.textContent = `Showing rooms with ${pill.textContent.trim().toLowerCase()}.`;
         filterSuites();
       });
     });
