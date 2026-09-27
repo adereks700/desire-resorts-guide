@@ -2254,3 +2254,10 @@ main#main-content:focus-visible {
     transition: none !important;
   }
 }
+
+/* Hide mobile nav submenu toggle buttons on desktop viewports */
+@media (min-width: 769px) {
+  .nav-submenu-toggle {
+    display: none !important;
+  }
+}
