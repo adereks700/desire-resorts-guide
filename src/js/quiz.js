@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const progressTrack = document.querySelector(".progress-bar-track");
   const backBtn = document.getElementById("quiz-back");
   const restartBtn = document.getElementById("quiz-restart");
+  const nextStep = document.getElementById("result-next-step");
+  const nextLink = document.getElementById("result-next-link");
 
   function showStep(n, moveFocus = true) {
     current = n;
@@ -80,6 +82,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (trigger) trigger.textContent = data.primaryTrigger || "";
     if (wing) wing.textContent = data.recommendedWing || "";
     if (best) best.textContent = data.bestFor || "";
+    if (nextStep) nextStep.textContent = key === "balanced-explorer" ? "Next in your first-timer plan: compare the two resorts." : "Next in your first-timer plan: compare the resort characteristics that match your priorities, then move into room selection.";
+    if (nextLink) { nextLink.href = "/compare/"; nextLink.textContent = "Compare the Resorts"; }
     if (priorities) {
       priorities.innerHTML = priorityLabels(key).map((item) => "<span>" + item + "</span>").join("");
     }
