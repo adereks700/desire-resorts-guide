@@ -1,67 +1,89 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const bookingForms = document.querySelectorAll(".booking-form, #booking-engine-form");
+  const drawer = document.getElementById("booking-drawer");
+  const drawerTab = document.querySelector(".drawer-tab");
+  const closeButton = document.createElement("button");
+  const forms = document.querySelectorAll(".custom-booking-bar");
 
-  const RESORT_URLS = {
-    drm: "https://www.desire-experience.com/resorts/desire-riviera-maya-resort/",
-    pearl: "https://www.desire-experience.com/resorts/desire-pearl-resort/",
-    both: "https://www.desire-experience.com/resorts/"
+  const localDate = (date = new Date()) => [
+    date.getFullYear(),
+    String(date.getMonth() + 1).padStart(2, "0"),
+    String(date.getDate()).padStart(2, "0")
+  ].join("-");
+
+  forms.forEach((form) => {
+    const checkin = form.querySelector("input[name='checkin']");
+    if (checkin && !checkin.min) checkin.min = localDate();
+    if (checkin && !checkin.value) checkin.value = localDate();
+  });
+
+  if (!drawer || !drawerTab) return;
+
+  let previousFocus = null;
+  closeButton.type = "button";
+  closeButton.className = "drawer-close-btn";
+  closeButton.textContent = "Close";
+  closeButton.setAttribute("aria-label", "Close availability panel");
+  drawer.prepend(closeButton);
+
+  const setPageInert = (isInert) => {
+    Array.from(document.body.children).forEach((el) => {
+      if (el === drawer || el === drawerTab) return;
+      if (isInert) el.setAttribute("inert", "");
+      else el.removeAttribute("inert");
+    });
   };
 
-  bookingForms.forEach((form) => {
-    // Default dates (Check-in tomorrow, check-out in 4 days) if unset
-    const checkinInput = form.querySelector("input[name='checkin'], #checkin");
-    const checkoutInput = form.querySelector("input[name='checkout'], #checkout");
+  const close = (restore = true) => {
+    drawer.classList.remove("is-expanded");
+    drawer.setAttribute("aria-hidden", "true");
+    drawer.setAttribute("inert", "");
+    drawerTab.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("drawer-open");
+    setPageInert(false);
+    if (restore && previousFocus) previousFocus.focus();
+    previousFocus = null;
+  };
 
-    if (checkinInput && !checkinInput.value) {
-      const tomorrow = new Date();
-      tomorrow.setDate(tomorrow.getDate() + 1);
-      checkinInput.value = tomorrow.toISOString().split("T")[0];
-      checkinInput.min = new Date().toISOString().split("T")[0];
+  const open = () => {
+    if (window.innerWidth >= 992) return;
+    previousFocus = document.activeElement;
+    drawer.classList.add("is-expanded");
+    drawer.setAttribute("aria-hidden", "false");
+    drawer.removeAttribute("inert");
+    drawerTab.setAttribute("aria-expanded", "true");
+    document.body.classList.add("drawer-open");
+    setPageInert(true);
+    window.requestAnimationFrame(() => closeButton.focus());
+  };
 
-      if (checkoutInput && !checkoutInput.value) {
-        const defaultOut = new Date(tomorrow);
-        defaultOut.setDate(defaultOut.getDate() + 3);
-        checkoutInput.value = defaultOut.toISOString().split("T")[0];
-        checkoutInput.min = checkinInput.value;
-      }
+  drawerTab.addEventListener("click", () => {
+    if (drawer.getAttribute("aria-hidden") === "true") open();
+    else close();
+  });
+  closeButton.addEventListener("click", () => close());
+
+  document.addEventListener("keydown", (event) => {
+    if (drawer.getAttribute("aria-hidden") !== "false") return;
+    if (event.key === "Escape") {
+      event.preventDefault();
+      close();
+      return;
     }
-
-    if (checkinInput && checkoutInput) {
-      checkinInput.addEventListener("change", () => {
-        checkoutInput.min = checkinInput.value;
-        if (checkoutInput.value && checkoutInput.value <= checkinInput.value) {
-          const nextDay = new Date(checkinInput.value);
-          nextDay.setDate(nextDay.getDate() + 1);
-          checkoutInput.value = nextDay.toISOString().split("T")[0];
-        }
-      });
+    if (event.key !== "Tab") return;
+    const focusable = drawer.querySelectorAll("a, button:not([disabled]), input, select, textarea, [tabindex]:not([tabindex='-1'])");
+    if (!focusable.length) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
     }
+  });
 
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-
-      const propertySelect = form.querySelector("select[name='property'], #property");
-      const selectedProperty = propertySelect ? propertySelect.value : "drm";
-      const baseUrl = RESORT_URLS[selectedProperty] || RESORT_URLS.drm;
-
-      const destinationUrl = new URL(baseUrl);
-      const params = destinationUrl.searchParams;
-
-      // Extract form values
-      const checkin = checkinInput ? checkinInput.value : "";
-      const checkout = checkoutInput ? checkoutInput.value : "";
-      const guests = form.querySelector("select[name='guests'], #guests");
-
-      if (checkin) params.set("checkin", checkin);
-      if (checkout) params.set("checkout", checkout);
-      if (guests && guests.value) params.set("occupancy", guests.value);
-
-      // Append standard affiliate tracking
-      params.set("utm_source", "travel_with_nicole");
-      params.set("utm_medium", "affiliate");
-      params.set("utm_campaign", "suite_check_bar");
-
-      window.open(destinationUrl.toString(), "_blank", "noopener,noreferrer");
-    });
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 992 && drawer.getAttribute("aria-hidden") === "false") close(false);
   });
 });
