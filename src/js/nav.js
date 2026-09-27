@@ -1,51 +1,87 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const navToggle = document.querySelector(".nav-toggle, [data-nav-toggle]");
-  const navMenu = document.querySelector(".nav-menu, [data-nav-menu]");
-  const navItemsWithSubmenu = document.querySelectorAll(".nav-item.has-dropdown, .nav-item:has(.nav-dropdown)");
+  const navToggle = document.querySelector(".nav-toggle");
+  const navMenu = document.querySelector(".primary-nav");
+  const header = document.querySelector(".site-header");
+  if (!navToggle || !navMenu || !header) return;
 
-  if (!navToggle || !navMenu) return;
+  const submenuToggles = Array.from(navMenu.querySelectorAll(".nav-submenu-toggle"));
+  let previousFocus = null;
 
-  const toggleMenu = (open) => {
-    const isExpanded = open !== undefined ? open : navToggle.getAttribute("aria-expanded") !== "true";
-    navToggle.setAttribute("aria-expanded", String(isExpanded));
-    navMenu.classList.toggle("is-active", isExpanded);
-    document.body.classList.toggle("menu-open", isExpanded);
+  const setPageInert = (isInert) => {
+    Array.from(document.body.children).forEach((el) => {
+      if (el === header) return;
+      if (isInert) el.setAttribute("inert", "");
+      else el.removeAttribute("inert");
+    });
   };
 
-  navToggle.addEventListener("click", (e) => {
-    e.stopPropagation();
-    toggleMenu();
+  const closeSubmenus = () => {
+    navMenu.querySelectorAll(".nav-item.is-expanded").forEach((item) => item.classList.remove("is-expanded"));
+    submenuToggles.forEach((toggle) => {
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", `Expand ${toggle.closest(".nav-item").querySelector(".nav-link").textContent.trim()} submenu`);
+    });
+  };
+
+  const closeMenu = (restoreFocus = false) => {
+    navToggle.setAttribute("aria-expanded", "false");
+    navMenu.classList.remove("is-open");
+    document.body.classList.remove("nav-locked");
+    setPageInert(false);
+    closeSubmenus();
+    if (restoreFocus && previousFocus) previousFocus.focus();
+    previousFocus = null;
+  };
+
+  const openMenu = () => {
+    previousFocus = document.activeElement;
+    navToggle.setAttribute("aria-expanded", "true");
+    navMenu.classList.add("is-open");
+    document.body.classList.add("nav-locked");
+    setPageInert(true);
+  };
+
+  navToggle.addEventListener("click", () => {
+    if (navToggle.getAttribute("aria-expanded") === "true") closeMenu();
+    else openMenu();
   });
 
-  // Handle mobile submenu expansion
-  navItemsWithSubmenu.forEach((item) => {
-    const trigger = item.querySelector(".nav-link, button");
-    if (!trigger) return;
-
-    trigger.addEventListener("click", (e) => {
-      if (window.innerWidth <= 960) {
-        const hasDropdown = item.querySelector(".nav-dropdown");
-        if (hasDropdown) {
-          e.preventDefault();
-          const isOpen = item.classList.toggle("is-open");
-          trigger.setAttribute("aria-expanded", String(isOpen));
-        }
-      }
+  submenuToggles.forEach((toggle) => {
+    toggle.addEventListener("click", () => {
+      const item = toggle.closest(".nav-item");
+      const open = item.classList.toggle("is-expanded");
+      toggle.setAttribute("aria-expanded", String(open));
+      const label = item.querySelector(".nav-link").textContent.trim();
+      toggle.setAttribute("aria-label", `${open ? "Collapse" : "Expand"} ${label} submenu`);
     });
   });
 
-  // Close menus on Escape key
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      toggleMenu(false);
-      navItemsWithSubmenu.forEach((i) => i.classList.remove("is-open"));
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && navToggle.getAttribute("aria-expanded") === "true") {
+      event.preventDefault();
+      closeMenu(true);
+    }
+
+    if (event.key === "Tab" && navToggle.getAttribute("aria-expanded") === "true") {
+      const focusable = navMenu.querySelectorAll("a, button:not([disabled]), input, select, textarea, [tabindex]:not([tabindex='-1'])");
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        navToggle.focus();
+      } else if (!event.shiftKey && document.activeElement === navToggle) {
+        event.preventDefault();
+        first.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        navToggle.focus();
+      }
     }
   });
 
-  // Close when clicking outside of navigation
-  document.addEventListener("click", (e) => {
-    if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
-      toggleMenu(false);
-    }
+  document.addEventListener("click", (event) => {
+    if (navToggle.getAttribute("aria-expanded") !== "true") return;
+    if (!header.contains(event.target)) closeMenu();
   });
 });
