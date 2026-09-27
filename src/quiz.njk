@@ -1,23 +1,23 @@
 ---
 layout: layouts/base.njk
-title: "Which Desire Experience Matches Your Vacation Style?"
-description: "Take our 60-second quiz to find out whether Desire Riviera Maya or Desire Pearl better matches your vacation pace."
+title: "60-Second Desire Resort Planning Quiz"
+description: "Answer seven quick questions about pace, property layout, room priorities, social plans, and planning style to identify which Desire Resort characteristics are worth comparing."
 permalink: "/quiz/"
 ---
 <section class="quiz-container page container">
   <div class="quiz-header text-center">
     <span class="hero-eyebrow">Vacation Fit Quiz</span>
-    <h1>Which Desire Experience Fits Your Vacation Style?</h1>
+    <h1>Which Desire Resort Characteristics Fit Your Vacation Style?</h1>
     <p class="lead" style="max-width: var(--max-paragraph); margin: 0 auto 36px; color: var(--color-espresso-soft);">
-      Five quick questions about how you like to spend your time. Your result is a starting point for comparing Desire Riviera Maya and Desire Pearl, not a substitute for checking the current details of each resort.
+      Seven quick questions about how you like to travel, what matters in a room, and how you want to spend your time. Your result highlights characteristics worth comparing. It does not determine which resort you should book.
     </p>
   </div>
 
   <div id="quiz-card" class="card quiz-card">
     <div class="quiz-progress">
-      <span id="step-indicator" aria-live="polite" aria-atomic="true">Question 1 of 5</span>
-      <div class="progress-bar-track" role="progressbar" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1" aria-label="Quiz progress">
-        <div id="progress-bar-fill" style="width: 20%;"></div>
+      <span id="step-indicator" aria-live="polite" aria-atomic="true">Question 1 of 7</span>
+      <div class="progress-bar-track" role="progressbar" aria-valuemin="1" aria-valuemax="7" aria-valuenow="1" aria-label="Quiz progress">
+        <div id="progress-bar-fill" style="width: 14%;"></div>
       </div>
     </div>
 
@@ -111,12 +111,33 @@ permalink: "/quiz/"
       </div>
     </div>
 
+    <div class="quiz-step" data-q="6" style="display: none;">
+      <h2>What matters most when choosing a room?</h2>
+      <div class="quiz-options">
+        <button type="button" class="quiz-btn" data-val="romantic-retreat"><strong>A Quieter Base</strong><span>We care most about having a comfortable place to retreat between meals, activities, and evenings.</span></button>
+        <button type="button" class="quiz-btn" data-val="balanced-explorer"><strong>The Right Location</strong><span>We want to balance room comfort with convenient access to the areas we plan to use.</span></button>
+        <button type="button" class="quiz-btn" data-val="social-celebration"><strong>Being Near Activity</strong><span>We would rather be close to pools, entertainment, and the parts of the resort we expect to use most.</span></button>
+      </div>
+    </div>
+
+    <div class="quiz-step" data-q="7" style="display: none;">
+      <h2>How would you like this guide to help you plan?</h2>
+      <div class="quiz-options">
+        <button type="button" class="quiz-btn" data-val="romantic-retreat"><strong>Keep It Simple</strong><span>Give us a few practical things to know, then let us make the trip our own.</span></button>
+        <button type="button" class="quiz-btn" data-val="balanced-explorer"><strong>Show Us the Options</strong><span>Help us compare the choices so we can decide what matters to us.</span></button>
+        <button type="button" class="quiz-btn" data-val="social-celebration"><strong>Help Us Plan the Fun</strong><span>We want to know what is happening so we can decide what to join.</span></button>
+      </div>
+    </div>
+
+    <div class="quiz-actions" aria-label="Quiz controls"><button type="button" id="quiz-back" class="btn btn--outline" hidden>Back</button><button type="button" id="quiz-restart" class="btn btn--outline" hidden>Start Over</button></div>
+
     <div id="quiz-result" class="quiz-result" role="region" aria-live="polite" aria-labelledby="result-label" tabindex="-1" style="display: none; margin-top: 32px;">
       <figure id="result-figure" class="quiz-result__figure" hidden>
         <img id="result-image" class="quiz-result__image" src="" alt="" width="800" height="993" loading="lazy" decoding="async">
       </figure>
       <span class="pill-label">Your Vacation Style</span>
       <h2 id="result-label" style="margin: 16px 0 8px;"></h2>
+      <div id="result-priorities" class="result-priorities" aria-label="Your planning priorities"></div>
       <h3 id="result-resort" style="color: var(--color-teal); margin: 0 0 16px;"></h3>
       <p id="result-trigger" class="lead-text" style="color: var(--color-espresso-soft); margin-bottom: 20px;"></p>
       
