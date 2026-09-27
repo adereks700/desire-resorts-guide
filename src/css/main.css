@@ -2201,3 +2201,56 @@ main#main-content:focus-visible {
     outline: 3px solid Highlight;
   }
 }
+
+
+/* First-timer pathway */
+.first-timer-steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+.ft-card--step {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+.ft-card--step .ft-card__label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+.ft-card--step .ft-card__content h3 {
+  margin-top: 0;
+}
+.first-timer-next-step {
+  max-width: 980px;
+  margin: 28px auto 0;
+  padding: 20px 22px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--color-border);
+}
+.first-timer-next-step span {
+  flex: 1 1 320px;
+  color: var(--color-espresso-soft);
+}
+@media (min-width: 768px) {
+  .first-timer-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .first-timer-steps .ft-card,
+  .first-timer-next-step {
+    transition: none !important;
+  }
+}
