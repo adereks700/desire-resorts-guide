@@ -8,7 +8,7 @@ permalink: '/rooms/'
 <article class="rooms-editorial page container">
   <header class="rooms-header text-center">
     <span class="hero-eyebrow">Accommodations & Layouts</span>
-    <h1>Find Your Sanctuary</h1>
+    <h1>Compare Room Categories</h1>
     <p class="hero-lead" style="max-width: var(--max-paragraph); margin: 0 auto 28px; color: var(--color-espresso-soft);">
       Room choice is easier when you separate the things that actually change: view, private water features, living space, service level, and location. Use this page to compare current categories without treating any one room as a universal best choice.
     </p>
@@ -113,8 +113,8 @@ permalink: '/rooms/'
           <span class="property-tag">
             {{ 'Riviera Maya' if room.data.property == 'drm' else 'Pearl' }}
           </span>
-          <span class="vibe-badge {{ 'is-party' if room.data.vibe == 'heart-of-the-party' else 'is-quiet' }}">
-            {{ 'Swim-Up / Water Access' if room.data.vibe == 'heart-of-the-party' else 'Jacuzzi / Plunge Pool' }}
+          <span class="vibe-badge">
+            {% set roomTitle = room.data.title | lower %}{% if "swim-up" in roomTitle %}Swim-Up{% elif "jacuzzi" in roomTitle or "plunge" in roomTitle or "whirlpool" in roomTitle %}Private Water{% else %}Standard / View{% endif %}
           </span>
         </div>
 
