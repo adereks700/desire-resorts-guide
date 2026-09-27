@@ -2385,3 +2385,79 @@ main#main-content:focus-visible {
     flex: 1;
   }
 }
+
+/* Room guide and quiz pathway enhancements */
+.room-guide-note {
+  max-width: 980px;
+  margin: 0 auto 28px;
+}
+
+.room-selection-checklist {
+  max-width: 1100px;
+  margin: 0 auto 48px;
+  padding: 32px;
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.room-selection-checklist h2 {
+  margin: 4px 0 22px;
+}
+
+.room-selection-checklist__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.room-selection-checklist__grid li {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 18px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-canvas);
+}
+
+.room-selection-checklist__grid strong {
+  line-height: 1.3;
+}
+
+.room-selection-checklist__grid span {
+  color: var(--color-espresso-soft);
+  font-size: var(--font-size-sm);
+}
+
+.quiz-result-next-step {
+  margin: 0 0 28px;
+  padding: 22px 24px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-alt);
+}
+
+.quiz-result-next-step p {
+  margin: 6px 0 14px;
+  color: var(--color-espresso-soft);
+}
+
+@media (max-width: 980px) {
+  .room-selection-checklist__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .room-selection-checklist {
+    padding: 24px;
+  }
+
+  .room-selection-checklist__grid {
+    grid-template-columns: 1fr;
+  }
+}
