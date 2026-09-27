@@ -2157,3 +2157,47 @@ main#main-content:focus-visible {
     grid-template-columns: 1.4fr 1fr 1fr auto;
   }
 }
+
+
+/* Accessibility additions */
+.hero-slideshow-toggle {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  z-index: 3;
+  min-width: 48px;
+  min-height: 48px;
+  padding: 10px 14px;
+  border: 1px solid rgba(255,255,255,0.75);
+  border-radius: 999px;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  font-weight: 600;
+}
+.hero-slideshow-toggle:hover {
+  background: rgba(0,0,0,0.75);
+}
+.hero-slide[aria-hidden="true"] {
+  pointer-events: none;
+}
+@media (pointer: coarse) {
+  button,
+  select,
+  input[type="checkbox"],
+  input[type="radio"] {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+@media (forced-colors: active) {
+  .hero-slideshow-toggle,
+  .nav-toggle,
+  .nav-submenu-toggle,
+  .drawer-tab,
+  .drawer-close-btn {
+    border: 1px solid ButtonText;
+  }
+  :focus-visible {
+    outline: 3px solid Highlight;
+  }
+}
