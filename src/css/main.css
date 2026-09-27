@@ -2343,3 +2343,45 @@ main#main-content:focus-visible {
     width: 100%;
   }
 }
+
+/* Quiz planning profile */
+.quiz-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.result-priorities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 20px;
+}
+
+.result-priorities span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 6px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-surface-alt);
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+}
+
+.quiz-step h2:focus {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 6px;
+}
+
+@media (max-width: 760px) {
+  .quiz-actions {
+    justify-content: stretch;
+  }
+
+  .quiz-actions .btn {
+    flex: 1;
+  }
+}
