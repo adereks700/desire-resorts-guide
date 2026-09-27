@@ -1,4 +1,4 @@
----
+﻿---
 layout: layouts/base.njk
 title: "Boundaries, Comfort & Consent"
 description: "Plain-language answers on consent, boundaries, and clothing-optional etiquette at Desire Resorts, for couples visiting for the first time."
@@ -7,25 +7,14 @@ permalink: "/etiquette/"
 <section class="boundaries-bible page">
   <h1>Boundaries, Comfort & Consent at Desire</h1>
   <p class="lead">Everything you need to know about discretion, participation boundaries, and what clothing-optional actually looks like day to day.</p>
-  {% include "partials/etiquette-accordion.njk" %}
-</section>
 
-{% set faqItems = collections.etiquette[0].data.faq %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {% for qa in faqItems %}
-    {
-      "@type": "Question",
-      "name": {{ qa.q | dump | safe }},
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": {{ qa.a | dump | safe }}
-      }
-    }{% if not loop.last %},{% endif %}
-    {% endfor %}
-  ]
-}
-</script>
+  <figure class="etiquette-hero-figure" style="margin: 28px 0 36px; text-align: center;">
+    <img src="/img/etiquette-hero.webp" alt="Boundaries, comfort, and clothing-optional atmosphere at Desire Resorts" width="1200" height="630" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.08);" loading="eager" decoding="async">
+  </figure>
+
+  {% include "partials/etiquette-accordion.njk" %}
+
+  <figure class="etiquette-social-figure" style="margin: 36px 0 24px; text-align: center;">
+    <img src="/img/etiquette-social-interaction.webp" alt="Respectful couple conversations and social interactions at Desire Resorts" width="1200" height="800" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.08);" loading="lazy" decoding="async">
+  </figure>
+</section>
