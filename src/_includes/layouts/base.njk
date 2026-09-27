@@ -58,6 +58,19 @@
   <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#2b2318">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": {{ site.legalEntity | dump | safe }},
+    "alternateName": {{ site.brandName | dump | safe }},
+    "url": {{ site.url | dump | safe }},
+    "email": {{ site.email | dump | safe }},
+    "description": "Independent travel advisory and affiliate partner publishing guides to Desire Resorts. Not operated by or owned by Original Group or Desire Resorts.",
+    "areaServed": "Riviera Maya, Mexico"
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>

@@ -9,3 +9,23 @@ permalink: "/etiquette/"
   <p class="lead">Everything you need to know about discretion, participation boundaries, and what clothing-optional actually looks like day to day.</p>
   {% include "partials/etiquette-accordion.njk" %}
 </section>
+
+{% set faqItems = collections.etiquette[0].data.faq %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for qa in faqItems %}
+    {
+      "@type": "Question",
+      "name": {{ qa.q | dump | safe }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ qa.a | dump | safe }}
+      }
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>

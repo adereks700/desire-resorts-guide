@@ -10,6 +10,25 @@ hotelCode: "drm"
 bookingUrl: "https://www.desire-experience.com/desire-riviera-maya/?affiliate=6589&partner=14503"
 ---
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Desire Riviera Maya Resort Guide",
+  "about": {
+    "@type": "Resort",
+    "name": "Desire Riviera Maya Resort",
+    "url": "https://www.desire-experience.com/desire-riviera-maya/",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Puerto Morelos",
+      "addressRegion": "Quintana Roo",
+      "addressCountry": "MX"
+    }
+  }
+}
+</script>
+
 <article class="property-editorial page container">
   <!-- Editorial Header -->
   <header class="property-header text-center">

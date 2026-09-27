@@ -1,6 +1,11 @@
 <div class='etiquette-accordion'>
   {% for item in collections.etiquette %}
-    {{ item.templateContent | safe }}
+    {% for qa in item.data.faq %}
+    <details class="accordion-item">
+      <summary>{{ qa.q }}</summary>
+      <p>{{ qa.a | safe }}</p>
+    </details>
+    {% endfor %}
   {% endfor %}
 </div>
 
