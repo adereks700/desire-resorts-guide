@@ -10,9 +10,11 @@ permalink: '/rooms/'
     <span class="hero-eyebrow">Accommodations & Layouts</span>
     <h1>Find Your Sanctuary</h1>
     <p class="hero-lead" style="max-width: var(--max-paragraph); margin: 0 auto 28px; color: var(--color-espresso-soft);">
-      Where you sleep shapes how you experience Desire. Compare current room categories by view, features, and the kind of resort experience you want to build around them.
+      Room choice is easier when you separate the things that actually change: view, private water features, living space, service level, and location. Use this page to compare current categories without treating any one room as a universal best choice.
     </p>
   </header>
+
+  <div class="independent-guide-banner room-guide-note" role="note"><strong>Independent room guide:</strong> Category names, features, locations, inclusions, and availability can change. These descriptions are planning guidance based on currently listed room information. Confirm the exact category and current inclusions with the resort or booking channel before paying a premium for an upgrade.</div>
 
   <!-- Concierge Room Selection Advice -->
   <div class="verdict-banner text-center" style="max-width: 820px; margin: 0 auto 40px;">
@@ -26,9 +28,20 @@ permalink: '/rooms/'
   <div class="verdict-banner text-center" style="max-width: 820px; margin: 0 auto 40px;">
     <h3>What Is The Eden?</h3>
     <p>
-      The Eden is a distinct newer section of Riviera Maya that opened in 2024, with its own suite categories (Beloved, Seductive Swim-Up, and Diamond Ocean-View, marked below), rather than a rebrand of existing rooms. Booking a room in The Eden also puts you closer to Eden-exclusive spots like Eros and Kahlo restaurants, the Exotic Spa, and the section's own Jacuzzi Lounge & Bar. Confirm whether a room is in The Eden or the rest of the resort before booking, as the two sections have different room lineups and amenities.
+      The Eden is a distinct accommodation section within Riviera Maya, with its own suite categories (Beloved, Seductive Swim-Up, and Diamond Ocean-View, marked below), rather than a rebrand of existing rooms. The Eden is presented here as its own room tier within Riviera Maya rather than as a replacement for the resort's other categories. Compare the exact room category, listed amenities, and current access or service details before booking.
     </p>
   </div>
+
+  <section class="room-selection-checklist" aria-labelledby="room-selection-heading">
+    <div><span class="section-eyebrow">Before You Upgrade</span><h2 id="room-selection-heading">Five Questions to Ask</h2></div>
+    <ol class="room-selection-checklist__grid">
+      <li><strong>What view do we actually want?</strong><span>Garden, tropical, pool, ocean, or oceanfront can be a bigger difference than an amenity you may rarely use.</span></li>
+      <li><strong>Do we want private water?</strong><span>Separate a jacuzzi, plunge pool, and swim-up connection. They are not interchangeable.</span></li>
+      <li><strong>How much living space matters?</strong><span>Look at the layout, not just the word “suite.” Categories vary in living areas, bathrooms, terraces, and levels.</span></li>
+      <li><strong>Which services matter?</strong><span>Check whether the category currently lists butler service, transfers, VIP check-in, dining privileges, or other extras.</span></li>
+      <li><strong>Where will we spend our time?</strong><span>Ask about the room's location and nearby areas if proximity matters. A category name alone does not tell you the exact building.</span></li>
+    </ol>
+  </section>
 
   <!-- How to compare room categories -->
   <section class="room-difference-guide" aria-labelledby="room-difference-heading">
@@ -82,13 +95,13 @@ permalink: '/rooms/'
     </div>
 
     <div class="filter-group" style="margin-top: 16px;">
-      <span class="filter-label">Atmosphere:</span>
-      <div class="filter-pills" id="vibe-pills" role="group" aria-label="Filter by atmosphere">
-        <button type="button" class="room-pill is-active" aria-pressed="true" data-vibe="all">All Locations</button>
-        <button type="button" class="room-pill" aria-pressed="false" data-vibe="quiet-romantic">Quiet & Romantic</button>
-        <button type="button" class="room-pill" aria-pressed="false" data-vibe="heart-of-the-party">Heart of the Party</button>
+      <span class="filter-label">Room feature:</span>
+      <div class="filter-pills" id="vibe-pills" role="group" aria-label="Filter by room feature">
+        <button type="button" class="room-pill is-active" aria-pressed="true" data-vibe="all">All Features</button>
+        <button type="button" class="room-pill" aria-pressed="false" data-vibe="quiet-romantic">Jacuzzi / Plunge Pool</button>
+        <button type="button" class="room-pill" aria-pressed="false" data-vibe="heart-of-the-party">Swim-Up / Water Access</button>
       </div>
-      <span id="room-vibe-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true">Showing rooms for all locations.</span>
+      <span id="room-vibe-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true">Showing rooms with all features.</span>
     </div>
   </div>
 
@@ -101,7 +114,7 @@ permalink: '/rooms/'
             {{ 'Riviera Maya' if room.data.property == 'drm' else 'Pearl' }}
           </span>
           <span class="vibe-badge {{ 'is-party' if room.data.vibe == 'heart-of-the-party' else 'is-quiet' }}">
-            {{ 'Heart of the Party' if room.data.vibe == 'heart-of-the-party' else 'Quiet & Romantic' }}
+            {{ 'Swim-Up / Water Access' if room.data.vibe == 'heart-of-the-party' else 'Jacuzzi / Plunge Pool' }}
           </span>
         </div>
 
@@ -137,9 +150,9 @@ permalink: '/rooms/'
   <section class="concierge-trust-banner text-center" style="margin-top: 60px;">
     <h3>Need Help Selecting the Right Building?</h3>
     <p style="color: var(--color-espresso-soft); max-width: 600px; margin: 0 auto 20px;">
-      Specific room categories offer different views, layouts, features, and locations. Use our quick quiz or check live dates directly.
+      Specific room categories differ in views, layouts, water features, service, and location. Start with the characteristic that matters most to you, then confirm the exact category before booking.
     </p>
-    <a href="/quiz/" class="btn btn--outline">Take the 60-Second Vibe Check &rarr;</a>
+    <a href="/quiz/" class="btn btn--outline">Take the 60-Second Planning Quiz &rarr;</a>
   </section>
 </article>
 
