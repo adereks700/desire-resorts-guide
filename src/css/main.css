@@ -2261,3 +2261,85 @@ main#main-content:focus-visible {
     display: none !important;
   }
 }
+/* --------------------------------------------------------------------------
+   First-timer planning hub
+   -------------------------------------------------------------------------- */
+.first-time-intro,
+.first-time-booking-note {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  max-width: 980px;
+  margin: 0 auto 48px;
+  padding: 28px 32px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.first-time-intro > div,
+.first-time-booking-note > div {
+  max-width: 720px;
+}
+
+.first-time-intro h2,
+.first-time-booking-note h2 {
+  margin: 0 0 10px;
+}
+
+.first-time-intro p,
+.first-time-booking-note p {
+  margin: 0;
+  color: var(--color-espresso-soft);
+}
+
+.first-time-roadmap {
+  max-width: 1100px;
+  margin: 0 auto 72px;
+}
+
+.first-time-roadmap .first-timer-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.first-time-roadmap .ft-card {
+  min-height: 100%;
+}
+
+.first-time-next-steps {
+  max-width: 1100px;
+  margin: 0 auto 64px;
+}
+
+.first-time-next-steps .section-header {
+  margin-bottom: 28px;
+}
+
+.first-time-next-steps .ft-card {
+  height: 100%;
+}
+
+.first-time-booking-note {
+  margin-bottom: 20px;
+}
+
+.first-time-source-note {
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .first-time-intro,
+  .first-time-booking-note {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  .first-time-intro .editorial-btn,
+  .first-time-booking-note .editorial-btn {
+    width: 100%;
+  }
+}
