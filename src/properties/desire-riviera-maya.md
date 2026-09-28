@@ -190,7 +190,7 @@ bookingUrl: "https://www.desire-experience.com/desire-riviera-maya/?affiliate=65
 
     <!-- Embedded Native Booking Anchor -->
     <section id="property-booking" class="property-booking-box text-center">
-      <h2>Ready to Experience Riviera Maya?</h2>
+      <h2>Check Availability at Riviera Maya</h2>
       <p style="color: var(--color-espresso-soft); margin-bottom: 24px;">Search live rates with partner affiliate code 6589 directly on Original Group's engine.</p>
       {% set presetHotel = {id: 9, label: 'Desire Riviera Maya'} %}{% set cbb_id_suffix = 'drm-property' %}{% include 'partials/custom-booking-bar.njk' %}
     </section>
