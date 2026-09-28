@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
-  {% set pageTitle = title + " | " + site.brandName %}
+  {% set pageTitle = title | default(site.brandName) %}
+  {% if site.brandName not in pageTitle %}{% set pageTitle = pageTitle + " | " + site.brandName %}{% endif %}
   {% set pageDescription = description | default(site.defaultDescription) %}
   {% set pageUrl = site.url + (canonical | default(page.url)) %}
   {% set pageImage = site.url + (ogImage | default(site.defaultOgImage)) %}
