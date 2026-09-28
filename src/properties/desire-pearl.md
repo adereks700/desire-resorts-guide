@@ -101,7 +101,7 @@ bookingUrl: "https://www.desire-experience.com/desire-pearl-riviera-maya/?affili
 
     <!-- Embedded Native Booking Anchor -->
     <section id="property-booking" class="property-booking-box text-center">
-      <h2>Ready to Experience Desire Pearl?</h2>
+      <h2>Check Availability at Desire Pearl</h2>
       <p style="color: var(--color-espresso-soft); margin-bottom: 24px;">Search live rates with partner affiliate code 6589 directly on Original Group's engine.</p>
       {% set presetHotel = {id: 10, label: 'Desire Pearl'} %}{% set cbb_id_suffix = 'pearl-property' %}{% include 'partials/custom-booking-bar.njk' %}
     </section>
