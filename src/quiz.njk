@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
-title: "60-Second Desire Resort Planning Quiz"
-description: "Answer seven quick questions about pace, property layout, room priorities, social plans, and planning style to identify which Desire Resort characteristics are worth comparing."
+title: "60-Second Desire Resort Orientation"
+description: "Answer seven quick questions about pace, room priorities, social plans, and planning style to identify which Desire Resort characteristics you may want to compare."
 permalink: "/quiz/"
 ---
 <section class="quiz-container page container">
@@ -9,7 +9,7 @@ permalink: "/quiz/"
     <span class="hero-eyebrow">Vacation Fit Quiz</span>
     <h1>Which Desire Resort Characteristics Fit Your Vacation Style?</h1>
     <p class="lead" style="max-width: var(--max-paragraph); margin: 0 auto 36px; color: var(--color-espresso-soft);">
-      Seven quick questions about how you like to travel, what matters in a room, and how you want to spend your time. Your result highlights characteristics worth comparing. It does not determine which resort you should book.
+      Seven quick questions about pace, room priorities, social plans, and how you want to use the guide. Your result highlights planning characteristics to look at more closely. It is an orientation tool, not a recommendation or a substitute for comparing the current resort details.
     </p>
   </div>
 
@@ -138,20 +138,17 @@ permalink: "/quiz/"
       <span class="pill-label">Your Vacation Style</span>
       <h2 id="result-label" style="margin: 16px 0 8px;"></h2>
       <div id="result-priorities" class="result-priorities" aria-label="Your planning priorities"></div>
-      <div class="quiz-result-next-step"><span class="ft-card__label">Next step</span><p id="result-next-step"></p><a id="result-next-link" href="/compare/" class="editorial-btn editorial-btn--outline">Compare the Resorts</a></div>
-      <h3 id="result-resort" style="color: var(--color-teal); margin: 0 0 16px;"></h3>
-      <p id="result-trigger" class="lead-text" style="color: var(--color-espresso-soft); margin-bottom: 20px;"></p>
-      
+      <div class="quiz-result-next-step"><span class="ft-card__label">Next in your planning path</span><p id="result-next-step"></p><a id="result-next-link" href="/compare/" class="editorial-btn editorial-btn--outline">Compare the Resorts</a></div>
       <div class="result-details" style="background: var(--color-canvas); padding: 20px; border-radius: 6px; margin-bottom: 28px;">
-        <p style="margin: 0 0 8px;"><strong>Room approach:</strong> <span id="result-wing"></span></p>
-        <p style="margin: 0;"><strong>This may appeal to:</strong> <span id="result-best"></span></p>
+        <p style="margin: 0 0 8px;"><strong>What to compare:</strong> <span id="result-focus"></span></p>
+        <p style="margin: 0;"><strong>Keep in mind:</strong> <span id="result-context"></span></p>
       </div>
 
-      <p class="small-text" style="color: var(--color-espresso-soft); margin-bottom: 20px;">Resort offerings, room categories, entertainment, and schedules can change. Use your result as a starting point, then review the current resort details before booking.</p>
+      <p class="small-text" style="color: var(--color-espresso-soft); margin-bottom: 20px;">The orientation does not select a resort or room for you. Use it to decide which characteristics deserve a closer look, then review current resort details and booking terms.</p>
 
       <div class="result-actions" style="display: flex; gap: 16px; flex-wrap: wrap;">
-        <a id="result-link" href="#" class="btn btn--outline">Explore This Match</a>
         <a href="/compare/" class="btn btn--outline">Compare the Resorts</a>
+        <a href="/rooms/" class="btn btn--outline">Explore Rooms &amp; Suites</a>
         <a href="/#availability" class="btn btn--primary">Check Availability</a>
       </div>
     </div>
