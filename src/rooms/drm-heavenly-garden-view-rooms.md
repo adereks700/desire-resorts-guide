@@ -1,6 +1,6 @@
 ---
 layout: layouts/base.njk
-title: "Heavenly Garden-View Rooms"
+title: "Heavenly Garden View"
 tags: room
 permalink: false
 property: drm
