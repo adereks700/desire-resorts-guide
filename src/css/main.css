@@ -552,7 +552,7 @@ button[type="submit"] {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
 }
 
-#age-gate h1 {
+#age-gate h2 {
   margin: 0 0 var(--space-2);
   color: var(--text-on-ink);
   font-family: var(--font-serif);
