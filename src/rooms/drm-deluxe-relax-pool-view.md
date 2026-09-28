@@ -1,6 +1,6 @@
 ---
 layout: layouts/base.njk
-title: "Deluxe ‘Relax Pool’ View"
+title: "Deluxe Pool View"
 tags: room
 permalink: false
 property: drm
