@@ -1,11 +1,35 @@
-<div class='etiquette-accordion'>
+<div class="etiquette-accordion">
   {% for item in collections.etiquette %}
     {% for qa in item.data.faq %}
-    <details class="accordion-item">
-      <summary>{{ qa.q }}</summary>
-      <p>{{ qa.a | safe }}</p>
-    </details>
+      {% if loop.index == 1 %}
+        <section class="etiquette-group" aria-labelledby="etiquette-before-heading">
+          <div class="etiquette-group__heading">
+            <span class="section-eyebrow">Before You Arrive</span>
+            <h2 id="etiquette-before-heading">Start with your own comfort level</h2>
+            <p>These questions cover clothing-optional expectations, participation, and deciding what feels right for you.</p>
+          </div>
+      {% elif loop.index == 4 %}
+        </section>
+        <section class="etiquette-group" aria-labelledby="etiquette-social-heading">
+          <div class="etiquette-group__heading">
+            <span class="section-eyebrow">Meeting People</span>
+            <h2 id="etiquette-social-heading">Social interaction and discretion</h2>
+            <p>Use these answers as a practical introduction to observing, interacting, and respecting privacy.</p>
+          </div>
+      {% elif loop.index == 7 %}
+        </section>
+        <section class="etiquette-group" aria-labelledby="etiquette-boundaries-heading">
+          <div class="etiquette-group__heading">
+            <span class="section-eyebrow">Boundaries &amp; Consent</span>
+            <h2 id="etiquette-boundaries-heading">You can decide as you go</h2>
+            <p>There is no need to have every answer before your trip. Your comfort level can change as you experience the resort.</p>
+          </div>
+      {% endif %}
+      <details class="accordion-item">
+        <summary>{{ qa.q }}</summary>
+        <p>{{ qa.a | safe }}</p>
+      </details>
     {% endfor %}
+    </section>
   {% endfor %}
 </div>
-
