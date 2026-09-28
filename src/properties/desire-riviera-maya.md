@@ -47,7 +47,7 @@ bookingUrl: "https://www.desire-experience.com/desire-riviera-maya/?affiliate=65
   <section class="at-a-glance-strip">
     <div class="glance-item">
       <span class="glance-label">Atmosphere</span>
-      <span class="glance-val">Energetic & Social</span>
+      <span class="glance-val">Social & Activity-Focused</span>
     </div>
     <div class="glance-item">
       <span class="glance-label">Room Categories</span>
@@ -70,11 +70,9 @@ bookingUrl: "https://www.desire-experience.com/desire-riviera-maya/?affiliate=65
   <!-- Visual Storytelling Section -->
   <div class="property-narrative">
     <section class="narrative-block">
-      <h2>The Daytime Experience: The Pool is the Living Room</h2>
+      <h2>The Daytime Experience: Pool & Scheduled Activities</h2>
       <p>
-        At Desire Riviera Maya, the central pool is the pulse of the property. From late morning through late afternoon, music sets the tone. 
-        Whether you are taking in the foam party, participating in poolside games, or chatting with adjacent couples at the swim-up bar, 
-        scheduled activities and music create a changing daytime rhythm.
+        At Desire Riviera Maya, the main pool is one of the central activity areas. Music and scheduled activities shape the daytime rhythm, with pool games and social spaces available depending on the current program.
       </p>
       <p>
         For couples seeking intermittent quiet, the beachfront palapas and quiet garden areas offer a calm contrast just steps away from the music.
@@ -82,11 +80,10 @@ bookingUrl: "https://www.desire-experience.com/desire-riviera-maya/?affiliate=65
     </section>
 
     <section class="narrative-block">
-      <h2>Evenings: Where Production Meets Play</h2>
+      <h2>Evenings: Dining, Theme Nights & Entertainment</h2>
       <p>
         Evenings begin with upscale dining at venues like Sahl&oacute; and Tentazione, where guests enjoy dressing up in resort chic attire.
-        As dinner winds down around 10:00 PM, couples change into elaborate theme costumes. From "Between the Sheets" to "Boop's Boudoir," 
-        the nightclub and disco lounge become the nightly destination with DJ sets extending into the early hours.
+        As dinner winds down around 10:00 PM, the evening program can move into themed entertainment and dancing. Current theme-night names and dress codes are listed separately and can change.
       </p>
     </section>
 
@@ -95,7 +92,7 @@ bookingUrl: "https://www.desire-experience.com/desire-riviera-maya/?affiliate=65
       <h3>Who Tends to Love Desire Riviera Maya</h3>
       <ul>
         <li><strong>Social Couples:</strong> Those who enjoy scheduled activities, shared social spaces, and meeting other guests.</li>
-        <li><strong>Theme Costume Enthusiasts:</strong> Guests who love dressing to the nines for themed entertainment and nightclub parties.</li>
+        <li><strong>Guests interested in theme nights:</strong> Couples who enjoy planning outfits around the currently listed evening themes.</li>
         <li><strong>First-Timers Comparing Activity Levels:</strong> Couples who want to compare a larger property and its scheduled social programming with a more compact resort setting.</li>
       </ul>
     </section>
