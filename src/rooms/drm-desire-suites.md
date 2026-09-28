@@ -1,6 +1,6 @@
 ---
 layout: layouts/base.njk
-title: "Desire Suites"
+title: "Desire Suite"
 tags: room
 permalink: false
 property: drm
