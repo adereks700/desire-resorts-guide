@@ -38,7 +38,7 @@ bookingUrl: "https://www.desire-experience.com/desire-riviera-maya/?affiliate=65
       A larger beachfront adults-only resort with scheduled pool activities, themed evenings, multiple room categories, and several dining options.
     </p>
     <div class="property-header-cta">
-      <a href="#property-booking" class="btn btn--primary">Check Riviera Maya Dates</a>
+      <a href="#property-booking" class="btn btn--primary">Check Availability</a>
       <a href="/compare/" class="btn btn--outline">Compare with Pearl</a>
     </div>
   </header>

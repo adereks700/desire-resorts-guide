@@ -38,7 +38,7 @@ bookingUrl: "https://www.desire-experience.com/desire-pearl-riviera-maya/?affili
       A smaller oceanfront resort in Puerto Morelos with a compact layout, current room and suite categories, dining, pool activities, and evening programming.
     </p>
     <div class="property-header-cta">
-      <a href="#property-booking" class="btn btn--primary">Check Pearl Dates</a>
+      <a href="#property-booking" class="btn btn--primary">Check Availability</a>
       <a href="/compare/" class="btn btn--outline">Compare with Riviera Maya</a>
     </div>
   </header>
