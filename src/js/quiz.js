@@ -68,28 +68,19 @@ document.addEventListener("DOMContentLoaded", () => {
     if (restartBtn) restartBtn.hidden = false;
 
     const label = document.getElementById("result-label");
-    const resort = document.getElementById("result-resort");
-    const trigger = document.getElementById("result-trigger");
-    const wing = document.getElementById("result-wing");
-    const best = document.getElementById("result-best");
-    const link = document.getElementById("result-link");
+    const focus = document.getElementById("result-focus");
+    const context = document.getElementById("result-context");
     const img = document.getElementById("result-image");
     const figure = document.getElementById("result-figure");
     const priorities = document.getElementById("result-priorities");
 
     if (label) label.textContent = data.label || "Your Planning Profile";
-    if (resort) resort.textContent = data.resort || "";
-    if (trigger) trigger.textContent = data.primaryTrigger || "";
-    if (wing) wing.textContent = data.recommendedWing || "";
-    if (best) best.textContent = data.bestFor || "";
-    if (nextStep) nextStep.textContent = key === "balanced-explorer" ? "Next in your first-timer plan: compare the two resorts." : "Next in your first-timer plan: compare the resort characteristics that match your priorities, then move into room selection.";
+    if (focus) focus.textContent = priorityLabels(key).join(", ") + ". Compare those characteristics on the resort comparison and room pages.";
+    if (context) context.textContent = "Your answers describe planning priorities, not a resort recommendation. Current room categories, schedules, policies, and availability still need to be checked.";
+    if (nextStep) nextStep.textContent = "Use the comparison page to review the two properties side by side, then move into room selection.";
     if (nextLink) { nextLink.href = "/compare/"; nextLink.textContent = "Compare the Resorts"; }
     if (priorities) {
       priorities.innerHTML = priorityLabels(key).map((item) => "<span>" + item + "</span>").join("");
-    }
-    if (link) {
-      link.href = data.propertyUrl || "/compare/";
-      link.textContent = key === "balanced-explorer" ? "Compare Both Resorts" : "Explore " + (key === "romantic-retreat" ? "Desire Pearl" : "Riviera Maya");
     }
     if (img && data.image) {
       img.src = data.image;
