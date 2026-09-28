@@ -9,7 +9,7 @@ faq:
   - q: "Will other guests or staff make assumptions if we do not participate?"
     a: "No. Guests who stay in swimsuits all week and guests who spend it in the Jacuzzi Lounge are both just guests, staff treat every comfort level as the default."
   - q: "What does consent-forward mean here, day to day?"
-    a: "Observing is welcome, participating is invited (never assumed), and either can be declined at any moment without explanation."
+    a: "Observing is welcome, participation is invited rather than assumed, and either can be declined at any moment without explanation."
   - q: "Can we watch without being expected to join in?"
     a: "Yes. Spaces like the Jacuzzi Lounge are built for exactly that."
   - q: "What is the photography and recording policy?"
@@ -19,5 +19,5 @@ faq:
   - q: "Do we have to decide our comfort level before we arrive?"
     a: "No. Many couples arrive undecided and figure it out day by day."
   - q: "Is there a wrong way to experience Desire?"
-    a: "No. A couple that never leaves the beach loungers is having the exact intended vacation."
+    a: "No. A couple can spend the stay mostly on the beach loungers if that is how they prefer to experience the resort."
 ---
