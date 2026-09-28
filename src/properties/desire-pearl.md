@@ -83,7 +83,7 @@ bookingUrl: "https://www.desire-experience.com/desire-pearl-riviera-maya/?affili
     <section class="narrative-block">
       <h2>Evenings: Unhurried Romance & Atmosphere</h2>
       <p>
-        Nights at Pearl revolve around gastronomy and relaxed connections. Restaurants such as Aphrodite and Jade provide dining options in the compact resort setting. Evening entertainment is centered in the open-air lounge, offering acoustic performances, 
+        Nights at Pearl revolve around gastronomy and relaxed connections. Restaurants such as Aphrodite and Suki provide dining options in the compact resort setting. Evening entertainment is centered in the open-air lounge, offering acoustic performances, 
         circus shows, and themed nights where guests can dress up or keep it understated without feeling out of place. Later on, Obsession, 
         Pearl's own nightclub, keeps things going into the early hours for guests who want to dance&mdash;on a smaller, more compact scale than Riviera Maya's disco.
       </p>
