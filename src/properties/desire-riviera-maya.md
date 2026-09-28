@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
-title: "Desire Riviera Maya Resort - The High-Energy Flagship Guide"
-description: "An independent guide to Desire Riviera Maya: the high-energy, social flagship all-inclusive resort for couples in Riviera Maya, Mexico, including The Eden room tier, suite categories, and dining."
+title: "Desire Riviera Maya Resort Guide"
+description: "An independent guide to Desire Riviera Maya, including The Eden room tier, current room categories, dining, theme nights, and practical planning information."
 ogImage: "/img/drm-thumb.webp"
 tags: property
 templateEngineOverride: njk
@@ -32,10 +32,10 @@ bookingUrl: "https://www.desire-experience.com/desire-riviera-maya/?affiliate=65
 <article class="property-editorial page container">
   <!-- Editorial Header -->
   <header class="property-header text-center">
-    <span class="hero-eyebrow">Flagship Resort Guide</span>
+    <span class="hero-eyebrow">Riviera Maya Resort Guide</span>
     <h1>Desire Riviera Maya</h1>
     <p class="hero-lead" style="max-width: var(--max-paragraph); margin: 0 auto 32px; color: var(--color-espresso-soft);">
-      The iconic epicenter of Desire culture: high-octane pool energy, celebrated theme costume nights, and an open, social community where conversation starts effortlessly.
+      A larger beachfront adults-only resort with scheduled pool activities, themed evenings, multiple room categories, and several dining options.
     </p>
     <div class="property-header-cta">
       <a href="#property-booking" class="btn btn--primary">Check Riviera Maya Dates</a>
@@ -50,16 +50,16 @@ bookingUrl: "https://www.desire-experience.com/desire-riviera-maya/?affiliate=65
       <span class="glance-val">Energetic & Social</span>
     </div>
     <div class="glance-item">
-      <span class="glance-label">Total Suites</span>
-      <span class="glance-val">114 Rooms & Suites</span>
+      <span class="glance-label">Room Categories</span>
+      <span class="glance-val">Multiple current categories</span>
     </div>
     <div class="glance-item">
       <span class="glance-label">Pool Rhythm</span>
-      <span class="glance-val">DJs, Foam Parties & Games</span>
+      <span class="glance-val">DJs and scheduled activities</span>
     </div>
     <div class="glance-item">
-      <span class="glance-label">Nightlife</span>
-      <span class="glance-val">Full Theme Nights & Nightclub</span>
+      <span class="glance-label">Evening Programming</span>
+      <span class="glance-val">Theme nights and entertainment</span>
     </div>
     <div class="glance-item">
       <span class="glance-label">Transfer Time</span>
@@ -74,7 +74,7 @@ bookingUrl: "https://www.desire-experience.com/desire-riviera-maya/?affiliate=65
       <p>
         At Desire Riviera Maya, the central pool is the pulse of the property. From late morning through late afternoon, music sets the tone. 
         Whether you are taking in the foam party, participating in poolside games, or chatting with adjacent couples at the swim-up bar, 
-        there is never a lull in energy.
+        scheduled activities and music create a changing daytime rhythm.
       </p>
       <p>
         For couples seeking intermittent quiet, the beachfront palapas and quiet garden areas offer a calm contrast just steps away from the music.
@@ -94,9 +94,9 @@ bookingUrl: "https://www.desire-experience.com/desire-riviera-maya/?affiliate=65
     <section class="who-loves-card">
       <h3>Who Tends to Love Desire Riviera Maya</h3>
       <ul>
-        <li><strong>Outgoing & Social Couples:</strong> Those who enjoy large group dynamics, socializing over cocktails, and making fast friends.</li>
+        <li><strong>Social Couples:</strong> Those who enjoy scheduled activities, shared social spaces, and meeting other guests.</li>
         <li><strong>Theme Costume Enthusiasts:</strong> Guests who love dressing to the nines for themed entertainment and nightclub parties.</li>
-        <li><strong>First-Timers Seeking Energy:</strong> Couples who prefer a bustling, upbeat resort where nobody feels self-conscious because everyone is having fun.</li>
+        <li><strong>First-Timers Comparing Activity Levels:</strong> Couples who want to compare a larger property and its scheduled social programming with a more compact resort setting.</li>
       </ul>
     </section>
 
@@ -111,7 +111,7 @@ bookingUrl: "https://www.desire-experience.com/desire-riviera-maya/?affiliate=65
       <div class="verdict-banner" style="max-width: 900px; margin: 20px 0 32px;">
         <h3>What Eden Actually Changes</h3>
         <p>
-          Desire describes Eden as an exclusive section with more lavish accommodations, enhanced privacy, and elevated VIP amenities. At the same time, Eden guests retain access to the wider Riviera Maya resort, including its restaurants, bars, beach, clothing-optional areas, and spa. The practical question is therefore not whether Eden replaces the main resort, but whether the additional room features and service matter enough for your stay.
+          Desire describes Eden as a distinct accommodation section with higher-category suites, enhanced privacy features, and elevated services. At the same time, Eden guests retain access to the wider Riviera Maya resort, including its restaurants, bars, beach, clothing-optional areas, and spa. The practical question is therefore not whether Eden replaces the main resort, but whether the additional room features and service matter enough for your stay.
         </p>
       </div>
 
@@ -119,7 +119,7 @@ bookingUrl: "https://www.desire-experience.com/desire-riviera-maya/?affiliate=65
         <div class="room-difference-guide__intro">
           <span class="section-eyebrow">Before You Book</span>
           <h3 id="eden-decision-heading">Four Things to Compare</h3>
-          <p>Current Eden categories differ mainly by <strong>view</strong>, <strong>private water feature</strong>, <strong>suite tier</strong>, and <strong>service level</strong>. Start with the feature you will actually use rather than assuming the highest-priced category is automatically the best fit.</p>
+          <p>Current Eden categories differ mainly by <strong>view</strong>, <strong>private water feature</strong>, <strong>suite tier</strong>, and <strong>service level</strong>. Start with the feature you will actually use rather than assuming the highest-priced category is the right fit.</p>
         </div>
         <div class="room-difference-guide__grid">
           <div class="room-difference-guide__item"><strong>View</strong><span>Choose among tropical/garden, main-pool, and ocean-view settings depending on which outlook matters to you.</span></div>
@@ -178,13 +178,13 @@ bookingUrl: "https://www.desire-experience.com/desire-riviera-maya/?affiliate=65
         <span class="section-eyebrow">My Take for First-Timers</span>
         <h3>Choose the Feature You Will Actually Use</h3>
         <p style="color: var(--color-espresso-soft); max-width: 700px; margin: 0 auto 20px;">
-          If you spend most of your time around the resort, a view or private water feature may be more meaningful than a long list of premium extras. If the room itself is a major part of the vacation, the larger Diamond layouts and elevated services become more relevant. There is no single Eden category that is right for every couple.
+          If you spend most of your time around the resort, a view or private water feature may be more meaningful than a long list of premium extras. If the room itself is a major part of the vacation, the larger Diamond layouts and elevated services become more relevant. No single Eden category matches every couple.
         </p>
         <a href="/rooms/" class="btn btn--outline">Compare All Desire Rooms &rarr;</a>
       </div>
 
       <p class="small-text" style="margin: 24px auto 0; max-width: 760px; color: var(--color-espresso-soft);">
-        <strong>Eden section last verified:</strong> September 22, 2026. Summarizes current information published by Desire Resorts plus independent planning guidance. Always confirm your exact room category, inclusions, hours, and reservation requirements before travel.
+        <strong>Eden section last verified:</strong> September 22, 2026. Summarizes current information published by Desire Resorts plus independent planning guidance. Confirm your exact room category, current inclusions, hours, and reservation requirements before travel.
       </p>
     </section>
 
