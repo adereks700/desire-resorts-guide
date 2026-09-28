@@ -47,7 +47,7 @@ bookingUrl: "https://www.desire-experience.com/desire-pearl-riviera-maya/?affili
   <section class="at-a-glance-strip">
     <div class="glance-item">
       <span class="glance-label">Atmosphere</span>
-      <span class="glance-val">Intimate & Relaxed</span>
+      <span class="glance-val">Compact & Lower-Key</span>
     </div>
     <div class="glance-item">
       <span class="glance-label">Rooms & Suites</span>
@@ -70,10 +70,9 @@ bookingUrl: "https://www.desire-experience.com/desire-pearl-riviera-maya/?affili
   <!-- Visual Storytelling Section -->
   <div class="property-narrative">
     <section class="narrative-block">
-      <h2>The Daytime Experience: Gentle Oceanside Serenity</h2>
+      <h2>The Daytime Experience: Pool, Beach & Lounge Areas</h2>
       <p>
-        Desire Pearl is designed around a quieter, more architectural layout. The pool area sits close to the Caribbean waves, 
-        surrounded by lush landscaping and comfortable double cabanas. Music and lounge areas provide options for relaxing, reading, or spending time with your partner.
+        Desire Pearl has a compact layout with the pool, beach, and lounge areas close together. Music and scheduled activities provide options for joining in or spending time with your partner.
       </p>
       <p>
         The beach at Puerto Morelos offers soft white sand and calm, swimmable water protected by the offshore barrier reef.
@@ -81,11 +80,10 @@ bookingUrl: "https://www.desire-experience.com/desire-pearl-riviera-maya/?affili
     </section>
 
     <section class="narrative-block">
-      <h2>Evenings: Unhurried Romance & Atmosphere</h2>
+      <h2>Evenings: Dining, Entertainment & Theme Nights</h2>
       <p>
-        Nights at Pearl revolve around gastronomy and relaxed connections. Restaurants such as Aphrodite and Suki provide dining options in the compact resort setting. Evening entertainment is centered in the open-air lounge, offering acoustic performances, 
-        circus shows, and themed nights where guests can dress up or keep it understated without feeling out of place. Later on, Obsession, 
-        Pearl's own nightclub, keeps things going into the early hours for guests who want to dance&mdash;on a smaller, more compact scale than Riviera Maya's disco.
+        Nights at Pearl revolve around gastronomy and relaxed connections. Current dining information lists Aphrodite, Jade, and Pearl among the resort restaurants. Evening entertainment is centered in the open-air lounge, offering acoustic performances, 
+        circus shows, and themed nights where guests can dress up. Obsession provides a venue for dancing when scheduled.
       </p>
     </section>
 
