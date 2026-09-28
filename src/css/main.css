@@ -2463,13 +2463,16 @@ main#main-content:focus-visible {
 }
 
 /* Etiquette editorial layout */
-.etiquette-hero-figure,
-.etiquette-social-figure {
-  max-width: 1120px;
+.etiquette-hero-figure {
+  max-width: 960px;
   margin: 34px auto 56px;
 }
 
 .etiquette-hero-figure img,
+.etiquette-social-figure {
+  max-width: 800px;
+}
+
 .etiquette-social-figure img {
   display: block;
   width: 100%;
