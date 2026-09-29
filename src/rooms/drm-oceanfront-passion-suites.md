@@ -6,13 +6,13 @@ permalink: false
 property: drm
 vibe: "quiet-romantic"
 segmentAppeal: ["monogamous", "lifestyle-curious", "lifestyle-experienced"]
-difference: "Oceanfront + VIP service"
+difference: "Oceanfront + enhanced suite benefits"
 amenities:
   - "Airport transfer"
-  - "Butler service"
   - "Oceanfront deck"
-  - "VIP beach bed"
-  - "VIP restaurant"
-  - "Wine & snacks"
+  - "Daily continental breakfast"
+  - "Afternoon hors d\'oeuvres and sparkling wine"
+  - "Stocked minibar"
+  - "Specialty restaurant reservation privileges"
 ---
-This is a substantial step into premium-suite territory. The defining features are an oceanfront setting and elevated service, including a private oceanfront deck, butler service, airport transfer, VIP beach bed and VIP restaurant access. Desire also describes a private jacuzzi for this category.
+This category pairs an oceanfront setting with additional suite benefits. Current information describes a private oceanfront deck, private airport transfer, daily continental breakfast, afternoon hors d\'oeuvres with sparkling wine, a stocked minibar, and specialty restaurant reservation privileges. Confirm the current inclusions and any room-specific benefits when you book.
