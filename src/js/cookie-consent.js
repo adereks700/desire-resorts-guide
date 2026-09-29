@@ -21,11 +21,11 @@
     let consent = null;
     try { consent = localStorage.getItem(CONSENT_KEY); } catch (e) {}
 
-    const showBanner = () => {
+    const showBanner = (moveFocus = false) => {
       banner.hidden = false;
       banner.removeAttribute("aria-hidden");
       banner.classList.add("is-visible");
-      acceptBtn?.focus();
+      if (moveFocus) acceptBtn?.focus();
     };
 
     const hideBanner = () => {
@@ -52,7 +52,7 @@
     rejectBtn?.addEventListener("click", () => finish("rejected"));
 
     document.querySelectorAll(".js-open-cookie-preferences").forEach((button) => {
-      button.addEventListener("click", showBanner);
+      button.addEventListener("click", () => showBanner(true));
     });
   };
 
