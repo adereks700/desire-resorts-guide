@@ -48,3 +48,23 @@ permalink: "/etiquette/"
     <a href="/dining/" class="editorial-btn editorial-btn--outline">Explore Dining &rarr;</a>
   </section>
 </section>
+
+{% set faqItems = collections.etiquette[0].data.faq %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for qa in faqItems %}
+    {
+      "@type": "Question",
+      "name": {{ qa.q | dump | safe }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ qa.a | dump | safe }}
+      }
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>

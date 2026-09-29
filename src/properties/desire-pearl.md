@@ -82,7 +82,7 @@ bookingUrl: "https://www.desire-experience.com/desire-pearl-riviera-maya/?affili
     <section class="narrative-block">
       <h2>Evenings: Dining, Entertainment & Theme Nights</h2>
       <p>
-        Nights at Pearl revolve around gastronomy and relaxed connections. Current dining information lists Aphrodite, Jade, and Pearl among the resort restaurants. Evening entertainment is centered in the open-air lounge, offering acoustic performances, 
+        Nights at Pearl revolve around gastronomy and relaxed connections. Current dining information lists Aphrodite, Suki, and Pearl among the resort restaurants. Evening entertainment is centered in the open-air lounge, offering acoustic performances, 
         circus shows, and themed nights where guests can dress up. Obsession provides a venue for dancing when scheduled.
       </p>
     </section>

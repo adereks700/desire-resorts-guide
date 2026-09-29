@@ -1,6 +1,6 @@
 ---
 layout: layouts/base.njk
-title: "Passion Suite"
+title: "Oceanfront Passion Suites"
 tags: room
 permalink: false
 property: drm
