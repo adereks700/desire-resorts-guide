@@ -63,7 +63,7 @@ bookingUrl: "https://www.desire-experience.com/desire-riviera-maya/?affiliate=65
     </div>
     <div class="glance-item">
       <span class="glance-label">Transfer Time</span>
-      <span class="glance-val">~25 Min from CUN</span>
+      <span class="glance-val">~20 Min from CUN</span>
     </div>
   </section>
 
@@ -83,7 +83,7 @@ bookingUrl: "https://www.desire-experience.com/desire-riviera-maya/?affiliate=65
       <h2>Evenings: Dining, Theme Nights & Entertainment</h2>
       <p>
         Evenings begin with upscale dining at venues like Sahl&oacute; and Tentazione, where guests enjoy dressing up in resort chic attire.
-        As dinner winds down around 10:00 PM, the evening program can move into themed entertainment and dancing. Current theme-night names and dress codes are listed separately and can change.
+        Later in the evening, the program can move into themed entertainment and dancing. Current theme-night names and dress codes are listed separately and can change.
       </p>
     </section>
 
@@ -157,7 +157,7 @@ bookingUrl: "https://www.desire-experience.com/desire-riviera-maya/?affiliate=65
         <div class="eden-guide-card">
           <span class="section-eyebrow">Dining</span>
           <h3 id="eden-experience-heading">Eden Has Its Own Dining Options</h3>
-          <p><strong>Eros</strong> is the poolside restaurant associated with The Eden. Current official information lists breakfast and lunch as casual and open to guests generally, with Mediterranean/Greek fusion specialties and an elegant dress code for dinner.</p>
+          <p><strong>Eros</strong> is one of the dining venues associated with The Eden. Current official information lists breakfast and lunch à la carte exclusively for Eden guests, with Mediterranean/Greek fusion specialties for dinner. Check the current hours and reservation requirements before your trip.</p>
           <p><strong>Kahlo</strong> serves modern Mexican cuisine. The current official dining information lists breakfast for Premier members only and dinner with an elegant-casual dress code. Check the current reservation requirements and hours before your trip rather than assuming they are unchanged.</p>
           <p>Because Eden guests can also use the wider Riviera Maya resort, these are additions to the overall dining choices rather than the only places you can eat.</p>
           <a href="/dining/" class="btn btn--outline">See the Full Dining Guide &rarr;</a>
