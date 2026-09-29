@@ -82,7 +82,7 @@ bookingUrl: "https://www.desire-experience.com/desire-riviera-maya/?affiliate=65
     <section class="narrative-block">
       <h2>Evenings: Dining, Theme Nights & Entertainment</h2>
       <p>
-        Evenings begin with upscale dining at venues like Sahl&oacute; and Tentazione, where guests enjoy dressing up in resort chic attire.
+        Evenings can begin with dinner at venues such as Sahl&oacute;, where the dress code is more elegant, while casual options such as Tentazione serve a different part of the dining day.
         Later in the evening, the program can move into themed entertainment and dancing. Current theme-night names and dress codes are listed separately and can change.
       </p>
     </section>
