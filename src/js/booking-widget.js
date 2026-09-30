@@ -10,10 +10,30 @@ document.addEventListener("DOMContentLoaded", () => {
     String(date.getDate()).padStart(2, "0")
   ].join("-");
 
+  const initializeCheckin = (checkin) => {
+    if (!checkin) return;
+    const today = localDate();
+    checkin.min = today;
+    if (!checkin.value || checkin.value < today) checkin.value = today;
+  };
+
   forms.forEach((form) => {
-    const checkin = form.querySelector("input[name='checkin']");
-    if (checkin && !checkin.min) checkin.min = localDate();
-    if (checkin && !checkin.value) checkin.value = localDate();
+    initializeCheckin(form.querySelector("input[name='checkin']"));
+
+    form.addEventListener("submit", (event) => {
+      const checkin = form.querySelector("input[name='checkin']");
+      initializeCheckin(checkin);
+
+      if (checkin && checkin.value < localDate()) {
+        event.preventDefault();
+        checkin.setCustomValidity("Please choose today or a future check-in date.");
+        checkin.reportValidity();
+        checkin.focus();
+        return;
+      }
+
+      if (checkin) checkin.setCustomValidity("");
+    });
   });
 
   if (!drawer || !drawerTab) return;
